@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="main"><source path="D:\StudioProjects\Pick&amp;Drop\smartlocation\src\main\assets"/><source path="D:\StudioProjects\Pick&amp;Drop\smartlocation\build\generated\assets\shaders\debug"/></dataSet><dataSet config="debug"><source path="D:\StudioProjects\Pick&amp;Drop\smartlocation\src\debug\assets"/></dataSet></merger>
