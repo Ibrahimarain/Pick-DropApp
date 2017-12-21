@@ -5,7 +5,6 @@
       <module fileurl="file://$PROJECT_DIR$/Pick&amp;Drop.iml" filepath="$PROJECT_DIR$/Pick&amp;Drop.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/lovelydialog/lovelydialog.iml" filepath="$PROJECT_DIR$/lovelydialog/lovelydialog.iml" />
-      <module fileurl="file://$PROJECT_DIR$/smartlocation/smartlocation.iml" filepath="$PROJECT_DIR$/smartlocation/smartlocation.iml" />
     </modules>
   </component>
 </project>

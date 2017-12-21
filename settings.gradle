@@ -1,1 +1,1 @@
-include ':app', ':lovelydialog', ':smartlocation'
+include ':app', ':lovelydialog'

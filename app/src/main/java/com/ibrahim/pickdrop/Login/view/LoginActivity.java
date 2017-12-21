@@ -91,8 +91,6 @@ public class LoginActivity extends AppCompatActivity {
 
 
     void sendCompanyCodeRequest (final String companyCode){
-
-
         if (companyCode.length() <3 ){
             Toast.makeText(this, "CompanyCode short", Toast.LENGTH_SHORT).show();
             lovelyProgressDialog.dismiss();
@@ -155,6 +153,7 @@ public class LoginActivity extends AppCompatActivity {
                     if (response.equalsIgnoreCase("SUCCESS")){
                         localStoragePreferences.saveUserName(username);
                         localStoragePreferences.saveIsLoggedIn(true);
+                        parseData(resp);
 
                         startActivity(new Intent(LoginActivity.this,MapsActivity.class));
                         finish();
@@ -180,8 +179,20 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
-
     }
+
+    void parseData(String json){
+
+        try {
+            JSONObject jsonObject = new JSONObject(json);
+
+
+
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+    }
+
 
 
 
