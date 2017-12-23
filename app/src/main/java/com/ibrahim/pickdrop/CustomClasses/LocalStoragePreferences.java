@@ -8,6 +8,7 @@ import android.content.SharedPreferences;
 public class LocalStoragePreferences {
     public final static String STORAGE_NAME = "userInfo";
     private static final String USERID = "UserId";
+
     private static final String FIRSTNAME = "FirstName";
     private static final String LASTNAME = "LastName";
     private static final String COMPANY_CODE = "CompanyCode";
@@ -29,6 +30,12 @@ public class LocalStoragePreferences {
     private final String SYNCH_UP_DATE = "synch_down_date";
     private final String SYNCH_UP_TIME = "synch_up_time";
     private Context context;
+
+
+    private static final String USER_TYPE = "UserType";
+    private static final String USER_DATA = "UserData";
+
+
 
     private LocalStoragePreferences(Context context) {
         this.context = context;
@@ -192,7 +199,6 @@ public class LocalStoragePreferences {
         sp.putInt(USERID, UserId);
         sp.apply();
     }
-
     //SycnDown
     public void saveIsSyncDown(boolean sycnDown) {
         save(SYNC_DOWN, sycnDown);
@@ -372,4 +378,29 @@ public class LocalStoragePreferences {
         sp.putString("local", str_local);
         sp.commit();
     }
+
+    public void saveUserType(int userType) {
+        SharedPreferences.Editor sp = context.getSharedPreferences(STORAGE_NAME, Context.MODE_PRIVATE).edit();
+        sp.putInt(USER_TYPE, userType);
+        sp.apply();
+    }
+
+    public int getUserType() {
+        return context.getSharedPreferences(STORAGE_NAME, Context.MODE_PRIVATE).getInt(USER_TYPE, 0);
+    }
+
+
+    public void saveUserData(String userData) {
+        SharedPreferences.Editor sp = context.getSharedPreferences(STORAGE_NAME, Context.MODE_PRIVATE).edit();
+        sp.putString(USER_DATA, userData);
+        sp.apply();
+    }
+
+    public String  getUserData() {
+        return context.getSharedPreferences(STORAGE_NAME, Context.MODE_PRIVATE).getString(USER_DATA, "");
+    }
+
+
+
+
 }

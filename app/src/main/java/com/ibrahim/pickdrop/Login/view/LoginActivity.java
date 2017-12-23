@@ -13,6 +13,8 @@ import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
+import com.google.gson.Gson;
+import com.ibrahim.pickdrop.CustomClasses.Constants;
 import com.ibrahim.pickdrop.CustomClasses.LocalStoragePreferences;
 import com.ibrahim.pickdrop.MapsActivity;
 import com.ibrahim.pickdrop.R;
@@ -184,9 +186,22 @@ public class LoginActivity extends AppCompatActivity {
     void parseData(String json){
 
         try {
-            JSONObject jsonObject = new JSONObject(json);
+            JSONObject mainObject = new JSONObject(json);
+            int userType = mainObject.getInt("UserType");
+            localStoragePreferences.saveUserType(userType);
+            JSONObject dataObj = mainObject.getJSONObject("data");
 
-//gfgf
+            String dataString = dataObj.toString();
+            localStoragePreferences.saveUserData(dataString);
+
+            if (userType == Constants.USER_TYPE_DRIVER){
+
+
+            }else if (userType == Constants.USER_TYPE_EMPLOYEE){
+
+
+            }
+
 
         } catch (JSONException e) {
             e.printStackTrace();

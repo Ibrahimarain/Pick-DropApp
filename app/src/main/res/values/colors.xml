@@ -5,5 +5,6 @@
     <color name="colorAccent">#FF4081</color>
     <color name="mainbgupper">#4865D3</color>
     <color name="btn_login_light">#337EE3</color>
+    <color name="color_white">#FFFFFF</color>
 
 </resources>
